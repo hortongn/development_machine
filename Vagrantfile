@@ -14,7 +14,7 @@ Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "bento/centos-7.1"
   #config.vm.box = "centos-6"
-  config.vm.hostname = 'development'
+  config.vm.hostname = 'dev'
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -41,7 +41,7 @@ Vagrant.configure(2) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-config.vm.synced_folder "~/Development", "/home/vagrant/Development-sync", type: "virtualbox"
+config.vm.synced_folder "~/Development", "/home/vagrant/Development", type: "virtualbox"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
