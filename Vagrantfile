@@ -14,7 +14,7 @@ Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "bento/centos-7.1"
   #config.vm.box = "centos-6"
-  config.vm.hostname = 'dev'
+  config.vm.hostname = 'MacDev'
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -52,7 +52,7 @@ config.vm.provider "virtualbox" do |vb|
   #   vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
-  vb.memory = "2048"
+  vb.memory = "4048"
 end
   #
   # View the documentation for the provider you are using for more
