@@ -2,7 +2,15 @@
 
 sudo yum update -y
 sudo yum install -y epel-release
-sudo yum install -y mailx git unzip tmux nano vim redis ImageMagick clamav clamav-update clamav-devel mysql-devel java-1.8.0-openjdk-devel nodejs gcc bzip2 kernel-devel dkms
+sudo yum install -y mailx git unzip nano vim redis ImageMagick clamav clamav-update clamav-devel mysql-devel java-1.8.0-openjdk-devel nodejs gcc bzip2 kernel-devel dkms libevent-devel
+
+# Install tmux
+cd ~
+wget https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz
+tar -xzf tmux-2.2.tar.gz
+cd tmux-2.2
+./configure && make
+sudo make install
 
 # Get clamav working
 sudo sed -i '/^Example/d' /etc/freshclam.conf
