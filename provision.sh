@@ -2,14 +2,14 @@
 
 sudo yum update -y
 sudo yum install -y epel-release
-sudo yum install -y mailx git unzip nano vim redis ImageMagick clamav clamav-update clamav-devel mysql-devel java-1.8.0-openjdk-devel nodejs gcc bzip2 kernel-devel dkms libevent-devel libxslt-devel libxml2-devel
+sudo yum install -y lynx mailx git unzip nano vim redis ImageMagick clamav clamav-update clamav-devel mysql-devel java-1.8.0-openjdk-devel nodejs gcc bzip2 kernel-devel dkms libevent-devel libxslt-devel libxml2-devel
 
 # Get clamav working
 sudo sed -i '/^Example/d' /etc/freshclam.conf
 sudo /usr/bin/freshclam
 
 # Install tmux
-su - vagrant -c 'cd /home/vagrant && get https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz'
+su - vagrant -c 'cd /home/vagrant && wget https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz'
 su - vagrant -c 'cd /home/vagrant && tar -xzf tmux-2.2.tar.gz'
 su - vagrant -c 'cd /home/vagrant/tmux-2.2 && ./configure && make'
 cd /home/vagrant/tmux-2.2 && make install
