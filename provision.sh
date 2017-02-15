@@ -12,12 +12,12 @@ sudo /usr/bin/freshclam
 su - vagrant -c 'cd /home/vagrant && wget https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz'
 su - vagrant -c 'cd /home/vagrant && tar -xzf tmux-2.2.tar.gz'
 su - vagrant -c 'cd /home/vagrant/tmux-2.2 && ./configure && make'
-cd /home/vagrant/tmux-2.2 && make install
+cd /home/vagrant/tmux-2.2 && sudo make install
 
 # Install RVM
 su - vagrant -c 'gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3'
 su - vagrant -c 'curl -L https://get.rvm.io | bash -s stable --ruby'
-su - vagrant -c 'rvm 2.1.6 --install --default'
+su - vagrant -c 'rvm 2.3.3 --install --default'
 
 # install bundler
 su - vagrant -c 'gem install bundler'

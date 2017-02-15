@@ -79,4 +79,6 @@ end
   #   sudo apt-get install -y apache2
   # SHELL
 config.vm.provision "shell", path: "provision.sh"  
+
+config.vbguest.auto_update = true
 end
