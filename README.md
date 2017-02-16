@@ -13,10 +13,12 @@
       * Note: you probably need to follow these NFS instructions too on your host machine: https://www.vagrantup.com/docs/synced-folders/nfs.html#root-privilege-requirement
    * Change `vb.memory` to the amount of RAM you want to giv the VM (default is 4 GB)
 
-1. `vagrant up --no-provision` (This boots the virtual machine.  On first run it creates the machine and runs the provision.sh script)
+1. `vagrant up --no-provision` (This boots the virtual machine.  On first run it creates the machine)
    * If you see errors about not being able to mount a folder, ignore that and move on to next step.
 
-1. `vagrant provision`
+1. `vagrant provision` (This runs the provision.sh script)
+
+1. `vagrant reload`
 
 1. `vagrant ssh` (This logs you in to the virtual machine command prompt)
 
