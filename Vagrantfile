@@ -59,6 +59,8 @@ config.vm.provider "virtualbox" do |vb|
   #
   #   # Customize the amount of memory on the VM:
   vb.memory = "4048"
+  # Customize the number of CPUs
+  vb.cpus = "2"
 end
   #
   # View the documentation for the provider you are using for more
@@ -80,5 +82,5 @@ end
   # SHELL
 config.vm.provision "shell", path: "provision.sh"  
 
-config.vbguest.auto_update = true
+config.vbguest.auto_update = false
 end
