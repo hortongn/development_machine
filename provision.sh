@@ -2,7 +2,7 @@
 
 sudo yum update -y
 sudo yum install -y epel-release
-sudo yum install -y lynx mailx git unzip nano vim redis ImageMagick clamav clamav-update clamav-devel mysql-devel java-1.8.0-openjdk-devel nodejs gcc bzip2 kernel-devel dkms libevent-devel libxslt-devel libxml2-devel
+sudo yum install -y lynx mailx git unzip nano vim redis ImageMagick clamav clamav-update clamav-devel mysql-devel java-1.8.0-openjdk-devel nodejs gcc bzip2 kernel-devel dkms libevent-devel libxslt-devel libxml2-devel ghostscript openoffice
 
 # Get clamav working
 sudo sed -i '/^Example/d' /etc/freshclam.conf
