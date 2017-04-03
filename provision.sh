@@ -4,6 +4,11 @@ sudo yum update -y
 sudo yum install -y epel-release
 sudo yum install -y lynx mailx git unzip nano vim redis ImageMagick clamav clamav-update clamav-devel mysql-devel java-1.8.0-openjdk-devel nodejs gcc bzip2 kernel-devel dkms libevent-devel libxslt-devel libxml2-devel ghostscript openoffice
 
+# Install ffmpeg
+sudo rpm --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
+sudo rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-1.el7.nux.noarch.rpm
+sudo yum -y install ffmpeg ffmpeg-devel
+
 # Get clamav working
 sudo sed -i '/^Example/d' /etc/freshclam.conf
 sudo /usr/bin/freshclam
