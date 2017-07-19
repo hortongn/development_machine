@@ -1,4 +1,5 @@
 1. Install Vagrant and VirtualBox on your local host.
+   * Note: Vagrant 1.8.x seems to be best.  Later versions seem to have problems with the NFS mounting.
 
 1. Clone this repository: `git clone https://github.com/hortongn/development_machine.git`
 
